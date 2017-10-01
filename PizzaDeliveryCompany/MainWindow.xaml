@@ -1,0 +1,62 @@
+﻿<Window x:Class="PizzaDeliveryCompany.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Online Pizza" Height="500" Width="700" Icon="Icon.png">
+    <Grid Background="#FFE6E6E6">
+        <Image x:Name="banner1" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="204" Source="Pizza Banner.jpeg" RenderTransformOrigin="0.51,0.464"/>
+        <TextBlock x:Name="TextBoxBanner" HorizontalAlignment="Left" Height="114" Margin="209,10,0,0" TextWrapping="Wrap" Text="Online Pizza Order Placement" VerticalAlignment="Top" Width="454" FontSize="45" FontFamily="Edwardian Script ITC" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" Foreground="#FFFD0000"/>
+        <Grid x:Name="Grid_PO" HorizontalAlignment="Left" Height="250" Margin="176,161,0,0" VerticalAlignment="Top" Width="487" Background="White" OpacityMask="Black">
+            <Label Content="Size:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,-5,0,0" FontWeight="Bold"/>
+            <RadioButton x:Name="Size_Small" Content="$10 Small" HorizontalAlignment="Left" Margin="15,21,0,0" VerticalAlignment="Top"  Width="150" Checked="Size_Small_Checked"/>
+            <RadioButton x:Name="Size_Medium" Content="$12 Medium" HorizontalAlignment="Left" Margin="15,41,0,0" VerticalAlignment="Top"  Width="150"/>
+            <RadioButton x:Name="Size_Large" Content="$14 Large" HorizontalAlignment="Left" Margin="15,61,0,0" VerticalAlignment="Top"  Width="150"/>
+            <CheckBox x:Name="Tomatoes" Content="$3 Tomatoes" HorizontalAlignment="Left" Margin="209,230,0,0" VerticalAlignment="Top" Width="150"/>
+            <CheckBox x:Name="Bacon" Content="$4 Bacon" HorizontalAlignment="Left" Margin="15,207,0,0" VerticalAlignment="Top" Width="150"/>
+            <CheckBox x:Name="Sun_Dried_Tom" Content="$3 Sun Dried Tomatoes" HorizontalAlignment="Left" Margin="15,187,0,0" VerticalAlignment="Top" Width="150"/>
+            <CheckBox x:Name="Extra_Cheese" Content="$3 Extra Cheese" HorizontalAlignment="Left" Margin="15,147,0,0" VerticalAlignment="Top" Width="150"/>
+            <CheckBox x:Name="Beef" Content="$4 Beef" HorizontalAlignment="Left" Margin="15,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="150"/>
+            <CheckBox x:Name="Mushroom" Content="$3 Mushroom" HorizontalAlignment="Left" Margin="209,147,0,0" VerticalAlignment="Top" Width="150"/>
+            <CheckBox x:Name="Green_Pepper" Content="$3 Green Pepper" HorizontalAlignment="Left" Margin="209,190,0,0" VerticalAlignment="Top" Width="150"/>
+            <CheckBox x:Name="Cheddar_Cheese" Content="$3 Cheddar Cheese" HorizontalAlignment="Left" Margin="209,210,0,0" VerticalAlignment="Top" Width="150"/>
+            <CheckBox x:Name="Parmesan" Content="$3 Parmesan" HorizontalAlignment="Left" Margin="209,170,0,0" VerticalAlignment="Top" Width="150"/>
+            <RadioButton x:Name="Size_Extra" Content="$16 Extra Large" HorizontalAlignment="Left" Margin="15,81,0,0" VerticalAlignment="Top" Width="150"/>
+            <Separator HorizontalAlignment="Left" Height="8" Margin="235,121,0,0" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.5,0.5">
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+            <CheckBox x:Name="Sauce_Garlic" Content="$1 Creamy Garlic" HorizontalAlignment="Left" Margin="367,24,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Sauce_Bbq" Content="$1 BBQ Sauce" HorizontalAlignment="Left" Margin="367,44,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Sauce_Pesto" Content="$1 Pesto" HorizontalAlignment="Left" Margin="367,64,0,0" VerticalAlignment="Top"/>
+            <Label Content="Drinks(510ml each):" HorizontalAlignment="Left" Margin="358,84,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <CheckBox x:Name="Coke" Content="$2 Coca Cola" HorizontalAlignment="Left" Margin="367,110,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Coke_Zero" Content="$2 Coke Zero" HorizontalAlignment="Left" Margin="367,130,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Sprite" Content="$2 Sprite" HorizontalAlignment="Left" Margin="367,167,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Pepsi" Content="$2 Pepsi" HorizontalAlignment="Left" Margin="367,147,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Ginger_Ale" Content="$2 Ginger Ale" HorizontalAlignment="Left" Margin="367,187,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="_7_Up" Content="$2 7UP" HorizontalAlignment="Left" Margin="367,207,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="Fanta" Content="$2 Fanta" HorizontalAlignment="Left" Margin="367,227,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Button x:Name="ButtonConfirm" Click="ButtonConfirm_Click" Content="Confirm" HorizontalAlignment="Left" Margin="536,416,0,0" VerticalAlignment="Top" Width="127" Height="36" Background="#FFEEEEEE" FontSize="20" RenderTransformOrigin="0.519,0.427" FontFamily="Calibri" FontWeight="Bold"/>
+        <Label Content="Menu :" HorizontalAlignment="Left" Height="36" Margin="176,129,0,0" VerticalAlignment="Top" Width="117" FontFamily="Calibri" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Phone Number: " HorizontalAlignment="Left" Margin="17,161,0,0" VerticalAlignment="Top"/>
+        <Label Content="Address: " HorizontalAlignment="Left" Margin="17,210,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PhoneNum" HorizontalAlignment="Left" Height="23" Margin="17,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="PhoneNum_TextChanged"/>
+        <TextBox x:Name="Address" HorizontalAlignment="Left" Height="23" Margin="17,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Address_TextChanged"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="17,259,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="17,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Email_TextChanged"/>
+        <Label Content="Toppings:" HorizontalAlignment="Left" Margin="176,259,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <CheckBox x:Name="papperoni" Content="$4 Papperoni" HorizontalAlignment="Left" Margin="191,285,0,0" VerticalAlignment="Top" Width="122"/>
+        <CheckBox x:Name="Ham" Content="$4 Ham" HorizontalAlignment="Left" Margin="191,387,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Veggie" Content="$5 Veggie" HorizontalAlignment="Left" Margin="385,285,0,0" VerticalAlignment="Top" Width="150"/>
+        <Separator HorizontalAlignment="Left" Height="9" Margin="176,259,0,0" VerticalAlignment="Top" Width="359"/>
+        <Label Content="Sauce:" HorizontalAlignment="Left" Margin="536,161,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="ButtonReset" Content="Start Over" HorizontalAlignment="Left" Margin="191,416,0,0" VerticalAlignment="Top" Width="127" Height="36" Background="#FFEEEEEE" FontSize="20" RenderTransformOrigin="0.519,0.427" FontFamily="Calibri" FontWeight="Bold" Click="ButtonReset_Click"/>
+
+    </Grid>
+</Window>
